@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lung Cancer Prediction</title>
+</head>
+<body>
+    <h1>Lung Cancer Prediction</h1>
+    <form method="POST" action="/predict">
+        <label for="gender">Gender (1: Male, 0: Female): </label>
+        <input type="number" name="gender" required><br>
+
+        <label for="age">Age: </label>
+        <input type="number" name="age" required><br>
+
+        <label for="smoking">Smoking (2: Yes, 1: No): </label>
+        <input type="number" name="smoking" required><br>
+
+        <label for="yellow_fingers">Yellow fingers (2: Yes, 1: No): </label>
+        <input type="number" name="yellow_fingers" required><br>
+
+        <label for="anxiety">Anxiety (2: Yes, 1: No): </label>
+        <input type="number" name="anxiety" required><br>
+
+        <label for="peer_pres">Peer pressure (2: Yes, 1: No): </label>
+        <input type="number" name="peer_pres" required><br>
+
+        <label for="chronic">Chronic disease (2: Yes, 1: No): </label>
+        <input type="number" name="chronic" required><br>
+
+        <label for="fatigue">Fatigue (2: Yes, 1: No): </label>
+        <input type="number" name="fatigue" required><br>
+
+        <label for="allergy">Allergy (2: Yes, 1: No): </label>
+        <input type="number" name="allergy" required><br>
+
+        <label for="wheezing">Wheezing (2: Yes, 1: No): </label>
+        <input type="number" name="wheezing" required><br>
+
+        <label for="alcohol">Alcohol(2: Yes, 1: No): </label>
+        <input type="number" name="alcohol" required><br>
+
+        <label for="cough">Coughing (2: Yes, 1: No): </label>
+        <input type="number" name="cough" required><br>
+
+        <label for="sob">Shortness of Breath (2: Yes, 1: No): </label>
+        <input type="number" name="sob" required><br>
+
+        <label for="swallowing">Swallowing difficulty (2: Yes, 1: No): </label>
+        <input type="number" name="swallowing" required><br>
+
+        <label for="chest_pain">Chest Pain (2: Yes, 1: No): </label>
+        <input type="number" name="chest_pain" required><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+    <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
